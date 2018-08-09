@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <h2>{{frmTitle}}</h2>
+        <hr/>
+        <div class="col-lg-6">
+            <form [formGroup]="myForm" (ngSubmit)="SaveData(myForm.value)">
+                 <table class="table table-bordered">
+                     <tr>
+                         <th colspan="2">Add Person Details</th>
+                     </tr>
+                     <tr>
+                         <td>Birth-date</td>
+                         <td><input type="any" formControlDate="birth-date" value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>Address</td>
+                         <td><input type="any" formControlAddress="address" value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                         <td><button class="btn btn-primary">Register</button></td>
+                     </tr>
+                    
+                </table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button class="btn btn-primary">Facebook</button></td>
+                </tr>
+                
+           
+            </form>
+
+        </div>
+       
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <h2>{{frmTitle}}</h2>
+        <hr/>
+        <div class="col-lg-6" [hidden]='hid1'>
+            <form #form="ngForm" (ngSubmit)="SaveData1(form.value)">
+                 <table class="table table-bordered">
+                     <tr>
+                         <th colspan="2">Add Person Details</th>
+                     </tr>
+                     <tr>
+                         <td>Name</td>
+                         <td><input type="text" name="name" ngModel value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>Email</td>
+                         <td><input type="email" name="email" ngModel value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>Mobile</td>
+                         <td><input type="number" name="mobile" ngModel value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                         <td><button class="btn btn-primary">Next</button></td>
+                     </tr>
+               
+            
+                </table>
+            </form>
+
+        </div>
+
+        <div class="col-lg-6" [hidden]="hid2">
+            <form [formGroup]="myForm" (ngSubmit)="SaveData(myForm.value)">
+                 <table class="table table-bordered">
+                     <tr>
+                         <th colspan="2">Add Person Details</th>
+                     </tr>
+                     <tr>
+                         <td>Birth-date</td>
+                         <td><input type="any" formControlDate="birth-date" value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>Address</td>
+                         <td><input type="any" formControlAddress="address" value="" class="form-control" /></td>
+                     </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                         <td><button class="btn btn-primary">Register</button></td>
+                     </tr>
+                    
+                </table>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button class="btn btn-primary">Facebook</button></td>
+                </tr>
+                
+           
+            </form>
+
+        </div>
+       
+    </div>
+</div>
