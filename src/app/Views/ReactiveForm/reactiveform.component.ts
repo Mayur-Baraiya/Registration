@@ -18,16 +18,26 @@ export class ReactiveFormComponent {
      this.frmTitle = 'Registration';
 
      this.myForm = fb.group({
-         
         Birthdate: '',
         Address: '',
-
-     }) 
-     
+     });
  }
- 
  SaveData(form: any) {
      console.log(form);
  }
+
+   onLoginClick() {
+        // this.router.navigate(['./home']);
+        console.log(1111111, FB);
+        FB.getLoginStatus((response) => {
+            if (response.status === 'connected') {
+                console.log('connected', response);
+            } else {
+                FB.login((loginResponse) => {
+                     console.log('connected', loginResponse);
+                });
+            }
+        });
+    }
 
 }
